@@ -1,5 +1,4 @@
 ---
-layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
@@ -11,8 +10,7 @@ redirect_from:
 
 See also the pdf version [here]({{ base_path }}/files/CV_generic_2024.pdf) (Last update 2024-01-14).
 
-Education
-======
+## Education
 
 * 2023 – 2024 : Master degree “Mathematics, Vision, Learning” (MVA) at École Normale Supérieure Paris-Saclay.
 
@@ -24,8 +22,7 @@ Education
 
 * 2018 – 2020 : Preparatory classes at Lycée Thiers, Marseille: two-year undergraduate intensive courses in mathematics and physics preparing for the national competitive exam for entry to top french engineering schools.
 
-Work experience
-======
+## Work experience
 
 * Research internship with Scool team at INRIA Lille supervised by Odalric-Ambrym Maillard and Debabrota Basu. Topic: *Developing Three-Risk-Proof Sequential Decision Making for Agricultural Decisions under Environmental Risks* (February – July 2023)
 
@@ -35,15 +32,13 @@ Work experience
 
 * Research internship with team FLOWERS at INRIA Laboratory in Bordeaux supervised by Masataka Sawayama. Topic : *Computational models for human multiple object tracking* (June – July 2021).
   
-Skills
-======
+## Skills
 
 * Programming languages: Python, C++, OCamL, Rust
 
 * Machine Learning : Reinforcement Learning, Sequential Learning, Computer Vision, Deep Learning
 
-Publications
-======
+## Publications
 
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}

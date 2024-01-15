@@ -9,13 +9,11 @@ redirect_from:
 
 Page under construction
 
-Bio
-=====
+## Bio
 
 Find my bio here very soon.
 
-Projects
-=====
+## Projects
 
 Find my past project report (research internship and master) on [this page]({{ base_path }}/reports).
 
