@@ -9,12 +9,12 @@ redirect_from:
 
 {% include base_path %}
 
-See pdf version [here](http://Thomick.github.io/files/CV_generic_2024.pdf) (Last update 2024-01-14).
+See also the pdf version [here]({{ base_path }}/files/CV_generic_2024.pdf) (Last update 2024-01-14).
 
 Education
 ======
 
-* 2023 – 2024 : PMaster degree “Mathematics, Vision, Learning” (MVA) at École Normale Supérieure Paris-Saclay.
+* 2023 – 2024 : Master degree “Mathematics, Vision, Learning” (MVA) at École Normale Supérieure Paris-Saclay.
 
 * 2022 – 2023 : Diploma "Research Year in Artificial Intelligence" (ARIA) at École Normale Supérieure Paris-Saclay.
 
