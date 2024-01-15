@@ -1,7 +1,7 @@
 ---
 title: "Regret Bounds for Satisficing in Multi-Armed Bandit Problems"
 collection: publications
-permalink: /publication/regret-bound-for-satisficing
+permalink: /publications/regret-bound-for-satisficing
 excerpt: 'This paper considers the objective of satisficing in multi-armed bandit problems. Instead of aiming to find an optimal arm, the learner is content with an arm whose reward is above a given satisfaction level.'
 date: 2023-06-09
 venue: 'Transactions on Machine Learning Research'
