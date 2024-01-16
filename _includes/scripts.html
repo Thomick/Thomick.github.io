@@ -4,11 +4,11 @@
 <script>
     document.getElementsByClassName('dark-mode-button')[0].onclick = function () {
         print();
-        darkmode()
-    }
-    init_darkmode()
+        darkmode();
+    };
+    init_darkmode();
     function init_darkmode() {
-        let enabled = localStorage.getItem('dark-mode')
+        let enabled = localStorage.getItem('dark-mode');
         if (enabled === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             enable();
         } else if (enabled === 'true') {
@@ -18,7 +18,7 @@
         }
     }
     function darkmode() {
-        let enabled = localStorage.getItem('dark-mode')
+        let enabled = localStorage.getItem('dark-mode');
 
         if (enabled === null) {
             init_darkmode();
@@ -29,7 +29,7 @@
         }
     }
     function enable() {
-        DarkReader.setFetchMethod(window.fetch)
+        DarkReader.setFetchMethod(window.fetch);
         DarkReader.enable();
         localStorage.setItem('dark-mode', 'true');
     }
