@@ -6,26 +6,62 @@ layout: compress
 
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
 
-  <body>
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+</head>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.44/darkreader.js"></script>
+  <script>
+    init_darkmode();
+    function init_darkmode() {
+      let enabled = localStorage.getItem('dark-mode');
+      if (enabled === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        enable();
+      } else if (enabled === 'true') {
+        enable();
+      } else {
+        disable();
+      }
+    }
+    function darkmode() {
+      let enabled = localStorage.getItem('dark-mode');
 
-    {{ content }}
+      if (enabled === null) {
+        init_darkmode();
+      } else if (enabled === 'false') {
+        enable();
+      } else {
+        disable();
+      }
+    }
+    function enable() {
+      DarkReader.setFetchMethod(window.fetch);
+      DarkReader.enable();
+      localStorage.setItem('dark-mode', 'true');
+    }
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+    function disable() {
+      DarkReader.disable();
+      localStorage.setItem('dark-mode', 'false');
+    }
+  </script>
+  {% include browser-upgrade.html %}
+  {% include masthead.html %}
 
-    {% include scripts.html %}
+  {{ content }}
 
-  </body>
+  <div class="page__footer">
+    <footer>
+      {% include footer/custom.html %}
+      {% include footer.html %}
+    </footer>
+  </div>
+
+  {% include scripts.html %}
+
+</body>
+
 </html>

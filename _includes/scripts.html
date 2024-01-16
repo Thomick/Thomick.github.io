@@ -1,42 +1,9 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.44/darkreader.js"></script>
 <script>
     document.getElementsByClassName('dark-mode-button')[0].onclick = function () {
         darkmode();
     };
-    init_darkmode();
-    function init_darkmode() {
-        let enabled = localStorage.getItem('dark-mode');
-        if (enabled === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            enable();
-        } else if (enabled === 'true') {
-            enable();
-        } else {
-            disable();
-        }
-    }
-    function darkmode() {
-        let enabled = localStorage.getItem('dark-mode');
-
-        if (enabled === null) {
-            init_darkmode();
-        } else if (enabled === 'false') {
-            enable();
-        } else {
-            disable();
-        }
-    }
-    function enable() {
-        DarkReader.setFetchMethod(window.fetch);
-        DarkReader.enable();
-        localStorage.setItem('dark-mode', 'true');
-    }
-
-    function disable() {
-        DarkReader.disable();
-        localStorage.setItem('dark-mode', 'false');
-    }
 </script>
 
 {% include analytics.html %}
