@@ -8,6 +8,8 @@ Soon my past projects will be presented here. For now, here is a list of my past
 
 ## Internships
 
+* *Emergence, control and open-ended evolution in cellular automata* [report]({{ base_path }}/files/internship/flowlenia.pdf) [slides]({{ base_path }}/files/internship/flowlenia_beamer.pdf)
+
 * *Developing Three-Risk-Proof Sequential Decision Making for Agricultural Decisions under Environmental Risks* [report]({{ base_path }}/files/internship/environmental_risks.pdf)
 
 * *Image restoration through real noise modeling* [report]({{ base_path }}/files/internship/image_restoration.pdf)
