@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Slime Simulation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="slimeCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('slimeCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function setCanvasSize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            return { width: canvas.width, height: canvas.height };
+        }
+
+        let { width, height } = setCanvasSize();
+        console.log(`Canvas size: ${width}x${height}`);
+
+        const scale = 2; // Reduce trail map resolution
+        const mapWidth = Math.ceil(width / scale);
+        const mapHeight = Math.ceil(height / scale);
+
+        const numAgents = 10000;
+        const agents = new Float32Array(numAgents * 3); // x, y, angle
+        const trailMap = new Uint8Array(mapWidth * mapHeight);
+
+        const moveSpeed = 20;
+        const turnSpeed = 2;
+        const sensorAngleRad = 30 * (Math.PI / 180);
+        const sensorOffsetDst = 35 / scale;
+        const sensorSize = 1;
+
+        const trailWeight = 5;
+        const diffuseRate = 3;
+        const decayRate = 0.2;
+        const deltaTime = 1 / 60;
+
+        function initializeAgents() {
+            for (let i = 0; i < numAgents * 3; i += 3) {
+                agents[i] = Math.random() * mapWidth;
+                agents[i + 1] = Math.random() * mapHeight;
+                agents[i + 2] = Math.random() * Math.PI * 2;
+            }
+        }
+
+        function sense(x, y, angle, sensorAngleOffset) {
+            const sensorAngle = angle + sensorAngleOffset;
+            const sensorX = x + Math.cos(sensorAngle) * sensorOffsetDst;
+            const sensorY = y + Math.sin(sensorAngle) * sensorOffsetDst;
+
+            const sampleX = Math.min(mapWidth - 1, Math.max(0, Math.floor(sensorX)));
+            const sampleY = Math.min(mapHeight - 1, Math.max(0, Math.floor(sensorY)));
+            return trailMap[sampleY * mapWidth + sampleX];
+        }
+
+        function updateAgents() {
+            for (let i = 0; i < numAgents * 3; i += 3) {
+                const x = agents[i];
+                const y = agents[i + 1];
+                let angle = agents[i + 2];
+
+                const weightForward = sense(x, y, angle, 0);
+                const weightLeft = sense(x, y, angle, sensorAngleRad);
+                const weightRight = sense(x, y, angle, -sensorAngleRad);
+
+                if (weightForward < weightLeft && weightForward < weightRight) {
+                    angle += (Math.random() - 0.5) * 2 * turnSpeed * deltaTime;
+                } else if (weightRight > weightLeft) {
+                    angle -= Math.random() * turnSpeed * deltaTime;
+                } else if (weightLeft > weightRight) {
+                    angle += Math.random() * turnSpeed * deltaTime;
+                }
+
+                const newX = (x + Math.cos(angle) * moveSpeed * deltaTime + mapWidth) % mapWidth;
+                const newY = (y + Math.sin(angle) * moveSpeed * deltaTime + mapHeight) % mapHeight;
+
+                agents[i] = newX;
+                agents[i + 1] = newY;
+                agents[i + 2] = angle;
+
+                const mapIndex = Math.floor(y) * mapWidth + Math.floor(x);
+                trailMap[mapIndex] = Math.min(255, trailMap[mapIndex] + trailWeight);
+            }
+        }
+
+        function diffuseTrailMap() {
+            const diffusedTrailMap = new Uint8Array(mapWidth * mapHeight);
+            const decay = decayRate * deltaTime * 255;
+
+            for (let y = 0; y < mapHeight; y++) {
+                for (let x = 0; x < mapWidth; x++) {
+                    let sum = 0;
+                    const index = y * mapWidth + x;
+
+                    for (let offsetY = -1; offsetY <= 1; offsetY++) {
+                        for (let offsetX = -1; offsetX <= 1; offsetX++) {
+                            const sampleX = (x + offsetX + mapWidth) % mapWidth;
+                            const sampleY = (y + offsetY + mapHeight) % mapHeight;
+                            sum += trailMap[sampleY * mapWidth + sampleX];
+                        }
+                    }
+
+                    const blurredValue = sum / 9;
+                    const diffuseWeight = diffuseRate * deltaTime;
+                    diffusedTrailMap[index] = Math.max(0, (trailMap[index] * (1 - diffuseWeight) + blurredValue * diffuseWeight) - decay);
+                }
+            }
+
+            for (let i = 0; i < trailMap.length; i++) {
+                trailMap[i] = diffusedTrailMap[i];
+            }
+        }
+
+        function drawTrailMap() {
+            const imageData = ctx.createImageData(width, height);
+            const data = imageData.data;
+
+            for (let y = 0; y < height; y++) {
+                for (let x = 0; x < width; x++) {
+                    const mapX = Math.floor(x / scale);
+                    const mapY = Math.floor(y / scale);
+                    const value = trailMap[mapY * mapWidth + mapX];
+                    const index = (y * width + x) * 4;
+                    data[index] = data[index + 1] = data[index + 2] = value;
+                    data[index + 3] = 255;
+                }
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        function animate() {
+            updateAgents();
+            diffuseTrailMap();
+            drawTrailMap();
+            requestAnimationFrame(animate);
+        }
+
+        initializeAgents();
+        animate();
+
+        window.addEventListener('resize', () => {
+            ({ width, height } = setCanvasSize());
+            console.log(`New canvas size: ${width}x${height}`);
+            initializeAgents();
+            trailMap.fill(0);
+        });
+    </script>
+</body>
+
+</html>
