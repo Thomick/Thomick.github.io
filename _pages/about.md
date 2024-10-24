@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-Page under construction
-
 ## Bio
 
 I am a graduate student at École Normale Supérieure Paris-Saclay, specializing in artificial intelligence and machine learning. My academic focus includes deep learning, computer vision, reinforcement learning, and mathematical modeling. I am particularly interested in developing AI solutions that address real-world challenges and exploring the fundamental nature of intelligence.

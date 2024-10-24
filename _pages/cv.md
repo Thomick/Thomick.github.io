@@ -8,7 +8,7 @@ redirect_from:
 
 {% include base_path %}
 
-See also the pdf version [here]({{ base_path }}/files/CV_generic_2024.pdf) (Last update 2024-01-14).
+See also the pdf version [here]({{ base_path }}/files/CV_Thomas_MICHEL_2024.pdf) (Last update: 2024-10-24).
 
 ## Education
 
@@ -23,6 +23,8 @@ See also the pdf version [here]({{ base_path }}/files/CV_generic_2024.pdf) (Last
 * 2018 – 2020 : Preparatory classes at Lycée Thiers, Marseille: two-year undergraduate intensive courses in mathematics and physics preparing for the national competitive exam for entry to top french engineering schools.
 
 ## Work experience
+
+* Research internship with Flowers team at INRIA Bordeaux supervised by Clément Moulin-Frier and Pierre-Yves Oudeyer. Topic: Emergence, control and open-ended evolution in cellular automata (April – September 2024).
 
 * Research internship with Scool team at INRIA Lille supervised by Odalric-Ambrym Maillard and Debabrota Basu. Topic: *Developing Three-Risk-Proof Sequential Decision Making for Agricultural Decisions under Environmental Risks* (February – July 2023)
 
