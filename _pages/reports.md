@@ -18,6 +18,6 @@ Soon my past projects will be presented here. For now, here is a list of my past
 
 ## Master projects
 
-* *Detecting fake news using geometric deep learning* [report]({{ base_path }}/files/master/geometric_fake_news.pdf)
+* *Detecting fake news using geometric deep learning* [report]({{ base_path }}/files/master/geometric_fake_news.pdf) with Bertille Temple
 
-* *Clustering Multivariate Ordinal Data* [report]({{ base_path }}/files/master/ordinal_data_clustering.pdf)
+* *Clustering Multivariate Ordinal Data* [report]({{ base_path }}/files/master/ordinal_data_clustering.pdf) with [Théo Rudkiewicz](https://perso.crans.org/theorudkiewicz/home.html) and Ali Ramlaoui
