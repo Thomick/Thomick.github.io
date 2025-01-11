@@ -1,8 +1,12 @@
 ---
-permalink: /reports/
+permalink: /projects/
 title: "Past projects"
 author_profile: true
 ---
+
+A selection of past research projects, mostly master and internship projects, that I have worked on.
+
+Also, check out my Github profile [here](https://github.com/Thomick) for some other past and current coding projects.
 
 ## Emergence, control and open-ended evolution in cellular automata (Internship project)
 
