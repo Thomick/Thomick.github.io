@@ -4,20 +4,43 @@ title: "Past projects"
 author_profile: true
 ---
 
-Soon my past projects will be presented here. For now, here is a list of my past project reports:
+## Emergence, control and open-ended evolution in cellular automata (Internship project)
 
-## Internships
+Can artificial systems exhibit the kind of open-ended evolution we see in nature? This research explores this intriguing question through Flow-Lenia, an advanced cellular automaton system. By incorporating principles of mass conservation and parameter localization, Flow-Lenia creates an environment where complex, life-like behaviors can emerge.
 
-* *Emergence, control and open-ended evolution in cellular automata* [report]({{ base_path }}/files/internship/flowlenia.pdf) [slides]({{ base_path }}/files/internship/flowlenia_beamer.pdf)
+Our investigation covered parameter mixing effects on evolutionary dynamics, AI-driven exploration techniques (IMGEP), and new metrics for measuring evolutionary complexity. The project combined artificial life concepts with modern AI methods, leading to discoveries of novel evolutionary dynamics and complex multi-species interactions. This research was awarded at the Virtual Creature Contest at the Artificial Life Conference (ALife 2024).
 
-* *Developing Three-Risk-Proof Sequential Decision Making for Agricultural Decisions under Environmental Risks* [report]({{ base_path }}/files/internship/environmental_risks.pdf)
+**Resources:**
 
-* *Image restoration through real noise modeling* [report]({{ base_path }}/files/internship/image_restoration.pdf)
+- [Full Report]({{ base_path }}/files/internship/flowlenia.pdf)
+- [Presentation Slides]({{ base_path }}/files/internship/flowlenia_beamer.pdf)
 
-* *Algorithms for satisficing in reinforcement learning* [report]({{ base_path }}/files/internship/satisficing_rl.pdf)
+## Developing Three-Risk-Proof Sequential Decision Making for Agricultural Decisions under Environmental Risks (Internship project)
 
-## Master projects
+How can we make better agricultural decisions when nature is inherently unpredictable? This research develops a novel framework for risk-aware sequential decision-making, focusing on forest management under environmental hazards like storms and fires.
 
-* *Detecting fake news using geometric deep learning* [report]({{ base_path }}/files/master/geometric_fake_news.pdf) with Bertille Temple
+The study introduces two key advances: a tree-level forest growth model that captures individual interactions and environmental risk responses, and a comprehensive framework for reinforcement learning under external risks. Our findings suggest that tree-level management approaches, considering individual characteristics and local interactions, can lead to more sustainable and profitable practices than traditional global management strategies.
 
-* *Clustering Multivariate Ordinal Data* [report]({{ base_path }}/files/master/ordinal_data_clustering.pdf) with [Théo Rudkiewicz](https://perso.crans.org/theorudkiewicz/home.html) and Ali Ramlaoui
+**Resources:**
+
+- [Full Report]({{ base_path }}/files/internship/environmental_risks.pdf)
+
+## Image Restoration Through Real Noise Modeling (Master project)
+
+How can we restore noisy images without requiring perfectly matched clean images for training? This research addresses this practical challenge by developing denoising algorithms that work with unpaired image sets.
+
+The project improves upon traditional approaches by replacing transposed convolution layers with resize-convolution blocks. This reduces unwanted artifacts while maintaining high restoration quality. We also explored combining denoising with super-resolution techniques, though some challenges remain in preventing artificial texture generation.
+
+**Resources:**
+
+- [Full Report]({{ base_path }}/files/internship/image_restoration.pdf)
+
+## Algorithms for Satisficing in Reinforcement Learning (Internship project)
+
+What if instead of seeking optimal solutions, we focused on finding "good enough" ones? This research explores the concept of satisficing in reinforcement learning - an approach that could make AI systems more efficient in resource-constrained environments.
+
+The study introduces a novel framework for "satisficing regret" and develops efficient algorithms for multi-armed bandits. Our work corrects existing literature on constant regret bounds and extends these insights to deterministic MDPs, suggesting promising applications where computing efficiency is crucial.
+
+**Resources:**
+
+- [Full Report]({{ base_path }}/files/internship/satisficing_rl.pdf)
