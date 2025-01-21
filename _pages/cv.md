@@ -24,7 +24,9 @@ See also the pdf version [here]({{ base_path }}/files/CV_Thomas_MICHEL_2024.pdf)
 
 ## Work experience
 
-* Research internship with Flowers team at INRIA Bordeaux supervised by Clément Moulin-Frier and Pierre-Yves Oudeyer. Topic: Emergence, control and open-ended evolution in cellular automata (April – September 2024).
+* PhD Student at Inria Lille. Supervised by Émilie Kaufmann and Debabrota Basu in the Scool team. Research Topic : *Responsible Reinforcement Learning: Robustness and Privacy for & by Sequential Decision Making*
+
+* Research internship with Flowers team at INRIA Bordeaux supervised by Clément Moulin-Frier and Pierre-Yves Oudeyer. Topic: *Emergence, control and open-ended evolution in cellular automata* (April – September 2024).
 
 * Research internship with Scool team at INRIA Lille supervised by Odalric-Ambrym Maillard and Debabrota Basu. Topic: *Developing Three-Risk-Proof Sequential Decision Making for Agricultural Decisions under Environmental Risks* (February – July 2023)
 
