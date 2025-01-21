@@ -8,9 +8,9 @@ redirect_from:
 ---
 
 
-I am a graduate student at École Normale Supérieure Paris-Saclay, specializing in artificial intelligence and machine learning. My academic focus includes deep learning, computer vision, reinforcement learning, and mathematical modeling. I am particularly interested in developing AI solutions that address real-world challenges and exploring the fundamental nature of intelligence.
+I am currently a PhD student in the Scool team at Inria on the topic: "Responsible Reinforcement Learning: Robustness and Privacy for & by Sequential Decision Making". My PhD supervisors are Émilie Kaufmann and Debabrota Basu. Previously, I graduated from École Normale Supérieure Paris-Saclay, where I specialized in artificial intelligence and machine learning. I am particularly interested in developing intelligent systems that work for and with humans to address real-world challenges, and in exploring the fundamental nature of intelligence.
 
-My research experiences span various domains within AI:
+My research experiences acquired through several internships span various domains within AI:
 
 - Emergence, control and open-ended evolution in cellular automata (INRIA Bordeaux, FLOWERS team)
 - Agricultural decision-making under environmental risks (INRIA Lille, SCOOL team)
