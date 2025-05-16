@@ -1,14 +1,16 @@
 // Variables
 // --------------------------
 
-$fa-font-path:                "../fonts" !default;
-$fa-font-size-base:           16px !default;
-$fa-css-prefix:               fa !default;
-$fa-version:                  "5.5.0" !default;
-$fa-border-color:             #eee !default;
-$fa-inverse:                  #fff !default;
-$fa-li-width:                 2em !default;
-$fa-fw-width:                 (20em / 16);
+$fa-font-path: "../fonts" !default;
+$fa-font-size-base: 16px !default;
+$fa-css-prefix: fa !default;
+$fa-version: "5.5.0" !default;
+$fa-border-color: #eee !default;
+$fa-inverse: #fff !default;
+$fa-li-width: 2em !default;
+$fa-fw-width: (
+  20em / 16
+);
 
 // Convenience function used to set content property
 @function fa-content($fa-var) {
@@ -130,6 +132,7 @@ $fa-var-blogger: \f37c;
 $fa-var-blogger-b: \f37d;
 $fa-var-bluetooth: \f293;
 $fa-var-bluetooth-b: \f294;
+$fa-var-bluesky: \e671;
 $fa-var-bold: \f032;
 $fa-var-bolt: \f0e7;
 $fa-var-bomb: \f1e2;
