@@ -8,14 +8,22 @@ redirect_from:
 ---
 
 
-I am currently a PhD student in the Scool team at Inria on the topic: "Responsible Reinforcement Learning: Robustness and Privacy for & by Sequential Decision Making". My PhD supervisors are Émilie Kaufmann and Debabrota Basu. Previously, I graduated from École Normale Supérieure Paris-Saclay, where I specialized in artificial intelligence and machine learning. I am particularly interested in developing intelligent systems that work for and with humans to address real-world challenges, and in exploring the fundamental nature of intelligence.
+# About me
 
-My research experiences acquired through several internships span various domains within AI:
+I'm a PhD student with the SCOOL team at Inria, where I'm exploring the important challenge of making reinforcement learning systems more robust, fair, and privacy-preserving. Under the guidance of Émilie Kaufmann and Debabrota Basu, I'm working on an exciting vision: creating AI that makes good decisions in the real world where algorithms directly impact human lives. This real-world impact is precisely why our systems require responsible design with strong guarantees, ensuring reliability even in unpredictable environments.
 
-- Emergence, control and open-ended evolution in cellular automata (INRIA Bordeaux, FLOWERS team)
-- Agricultural decision-making under environmental risks (INRIA Lille, SCOOL team)
-- Image restoration through real noise modeling (Centre Borelli, ENS Paris-Saclay)
-- Algorithms for satisficing in reinforcement learning (University of Leoben)
-- Computational models for human multiple object tracking (INRIA Bordeaux, FLOWERS team)
+I studied at École Normale Supérieure Paris-Saclay, where I developed a deep interest in machine learning and its potential to address real-world problems. My research is driven by two fundamental aims: building AI that directly improves and integrates into human lives, and uncovering what machine learning can teach us about the nature of intelligence itself.
+
+My research path has taken me through some wonderfully diverse territories:
+
+- Watching complex behaviors emerge spontaneously in cellular automata (INRIA Bordeaux)
+- Helping farmers make better decisions despite environmental uncertainties (INRIA Lille)
+- Teaching computers to restore damaged images by understanding real-world noise (Centre Borelli)
+- Designing algorithms that know when "good enough" is actually better than "perfect" (University of Leoben)
+- Creating models that mimic how humans track multiple moving objects (INRIA Bordeaux)
+
+I believe AI research is at its most exciting when it combines theoretical insights with practical applications that make a difference. If you're curious about responsible AI or any of these research areas, I'd love to connect!
+
+[Learn more about my past projects here →](/projects/)
 
 <embed src="_pages/slime.html" style="width:500px; height: 500px; border-radius: 50%">

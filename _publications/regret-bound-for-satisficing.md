@@ -9,30 +9,39 @@ paperurl: '/files/regret_bounds_for_satisficing.pdf'
 citation: 'Michel, T., Hajiabolhassan, H., & Ortner, R. (2023). &quot;Regret Bounds for Satisficing in Multi-Armed Bandit Problems.&quot; <i>Transactions on Machine Learning Research</i>.'
 ---
 
-## From Optimizing to Satisficing
+# When "Good Enough" Beats "Perfect": Exploring Satisficing in Reinforcement Learning
 
-In reinforcement learning, finding an optimal policy often requires extensive exploration. However, in many practical scenarios, we might be content with a solution that is "good enough" rather than strictly optimal. This insight led us to investigate the concept of satisficing in multi-armed bandit problems, where we seek solutions that exceed a given satisfaction threshold rather than pursuing the absolute best outcome.
+Have you ever found yourself spending time searching for the absolute best option, only to realize a perfectly good solution was right in front of you all along? This practical insight inspired our research at the University of Leoben, where we explored an important question: why should AI systems exhaust resources hunting for optimal solutions when something satisfactory would do just fine?
 
-We tackled this problem by introducing the notion of "satisficing regret," which measures performance relative to a satisfaction threshold rather than the optimal reward.
+## The Satisficing Approach
 
-## Key Findings
+Reinforcement learning typically aims to find the absolute best policy, which often demands extensive exploration of possibilities. In our research, we narrowed our focus to multi-armed bandit problems—a foundational framework in RL where an agent must choose between different actions (like pulling different slot machine arms) without initially knowing their rewards. This setting strips away the complexity of navigating through different states, letting us zoom in specifically on how algorithms make the explore-exploit tradeoff.
 
-Our research yielded interesting theoretical results:
+We embraced the concept of "satisficing"—a term coined by combining "satisfying" and "sufficing"—which perfectly captures our approach. Rather than endlessly hunting for the optimal choice, we asked: what if an algorithm could recognize when it had found something "good enough" and stop wasting resources on unnecessary exploration?
 
-1. In the realizable case (when a satisficing arm exists), we can achieve constant regret - a significant improvement over traditional approaches that typically have logarithmic satisficing regret bounds.
+In many scenarios, we aim for solutions that exceed a specific satisfaction threshold rather than pursuing the absolute best outcome. We introduced "satisficing regret," which quantifies how much an algorithm loses compared to having consistently played a satisfying action. The key challenge is not just finding a good-enough solution, but knowing when to stick with it instead of wastefully exploring alternatives—and conversely, recognizing when to abandon an action that reveals itself to not actually be satisfying.
 
-2. For the general case, our Sat-UCB algorithm achieves:
-   - Constant satisficing regret when a satisficing arm exists
-   - Standard logarithmic regret bounds otherwise
+## What We Discovered
 
-These results demonstrate that by relaxing the requirement to find an optimal solution, we can achieve more efficient learning in certain scenarios.
+The results were noteworthy:
+
+When a satisfactory action exists, our approach achieves constant regret—a significant improvement over traditional methods that typically show logarithmic satisficing regret growth. Note that they were not designed for satisficing. In practical terms, this means our algorithm can find good-enough solutions more efficiently and commit to them appropriately. Our approach also outperforms prior satisficing algorithms in the literature, in addition to providing theoretical guarantees that were not previously available.
+
+Our Sat-UCB algorithm proved particularly versatile, delivering:
+- Constant satisficing regret when satisfactory actions exist
+- Standard logarithmic regret in other scenarios, maintaining compatibility with classical approaches
 
 ## Experimental Results
 
-Our experimental evaluation demonstrated that Sat-UCB is not only superior to standard algorithms in the satisficing setting but also performs competitively in classic bandit scenarios. We also introduced Sat-UCB+, a modification that showed even better empirical performance, though we did not provide theoretical guarantees.
+We validated our theoretical findings through experiments on synthetic data. Not only did Sat-UCB outperform standard algorithms in satisficing scenarios, but it also remained competitive in classical bandit problems—showing you don't have to sacrifice traditional performance to gain efficiency.
 
-## Future Directions
+We also developed an enhanced version called Sat-UCB+ that showed even better results in our experiments. While we haven't yet developed the theoretical guarantees for this improved version, the empirical performance is promising.
 
-This work opens up several interesting avenues for future research, particularly in extending these concepts to more complex reinforcement learning settings. While our results in the multi-armed bandit case are promising, applying similar principles to general Markov decision processes remains a challenge.
+## Where This Takes Us Next
 
-[Download paper here]({{ base_path }}/files/regret_bounds_for_satisficing.pdf)
+This work opens doorways to more efficient and practical AI systems. The challenge now lies in extending these satisficing principles to more complex reinforcement learning environments and general Markov decision processes.
+
+Imagine AI systems that know when to stop searching for perfection and deliver timely, good-enough solutions—potentially improving applications from automated decision-making to resource allocation where timeliness matters as much as optimality.
+
+[Explore the technical details in the full paper →]({{ base_path }}/files/regret_bounds_for_satisficing.pdf)
+
