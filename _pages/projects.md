@@ -21,8 +21,6 @@ Our investigation covered parameter mixing effects on evolutionary dynamics, AI-
 
 ## Academic Reports and Commentaries (Master's coursework)
 
-A collection of research reports, literature reviews, and experimental analyses completed during my master's program.
-
 ### Memory, Time Perception and Intertemporal Decision-Making (Research report)
 
 This report analyzes Pedro Ortega and Naftali Tishby's information-theoretic framework linking memory capacity to temporal perception and decision-making, extending their work with experiments on how different decision strategies influence perceived duration.
