@@ -3,7 +3,6 @@ layout: archive
 title: "Talks and presentations"
 permalink: /talks/
 author_profile: true
-published: false
 ---
 
 {% if site.talkmap_link == true %}
@@ -13,5 +12,5 @@ published: false
 {% endif %}
 
 {% for post in site.talks reversed %}
-{% include archive-single-talk.html %}
+  {% include archive-single-talk.html %}
 {% endfor %}

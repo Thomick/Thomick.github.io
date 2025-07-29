@@ -5,63 +5,27 @@ layout: compress
 {% include base_path %}
 
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
 
-<head>
-  {% include head.html %}
-  {% include head/custom.html %}
-</head>
+  <body>
 
-<body>
-  <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.44/darkreader.js"></script>
-  <script>
-    init_darkmode();
-    function init_darkmode() {
-      let enabled = localStorage.getItem('dark-mode');
-      if (enabled === null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        enable();
-      } else if (enabled === 'true') {
-        enable();
-      } else {
-        disable();
-      }
-    }
-    function darkmode() {
-      let enabled = localStorage.getItem('dark-mode');
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
 
-      if (enabled === null) {
-        init_darkmode();
-      } else if (enabled === 'false') {
-        enable();
-      } else {
-        disable();
-      }
-    }
-    function enable() {
-      DarkReader.setFetchMethod(window.fetch);
-      DarkReader.enable();
-      localStorage.setItem('dark-mode', 'true');
-    }
+    {{ content }}
 
-    function disable() {
-      DarkReader.disable();
-      localStorage.setItem('dark-mode', 'false');
-    }
-  </script>
-  {% include browser-upgrade.html %}
-  {% include masthead.html %}
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
 
-  {{ content }}
+    {% include scripts.html %}
 
-  <div class="page__footer">
-    <footer>
-      {% include footer/custom.html %}
-      {% include footer.html %}
-    </footer>
-  </div>
-
-  {% include scripts.html %}
-
-</body>
-
+  </body>
 </html>

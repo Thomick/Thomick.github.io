@@ -1,6 +1,7 @@
 ---
 title: "Regret Bounds for Satisficing in Multi-Armed Bandit Problems"
 collection: publications
+category: manuscripts
 permalink: /publications/regret-bound-for-satisficing
 excerpt: 'This paper explores the concept of satisficing in multi-armed bandit problems, where we aim to find solutions that exceed a satisfaction threshold rather than seeking optimal outcomes.'
 date: 2023-06-09

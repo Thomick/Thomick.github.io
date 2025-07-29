@@ -19,24 +19,6 @@ Our investigation covered parameter mixing effects on evolutionary dynamics, AI-
 - [Full Report]({{ base_path }}/files/internship/flowlenia.pdf)
 - [Presentation Slides]({{ base_path }}/files/internship/flowlenia_beamer.pdf)
 
-## Academic Reports and Commentaries (Master's coursework)
-
-### Memory, Time Perception and Intertemporal Decision-Making (Research report)
-
-This report analyzes Pedro Ortega and Naftali Tishby's information-theoretic framework linking memory capacity to temporal perception and decision-making, extending their work with experiments on how different decision strategies influence perceived duration.
-
-**Resources:**
-
-- [Full Report]({{ base_path }}/files/master/memory_time_perception.pdf)
-
-### Situational Awareness in Large Language Models (Research survey)
-
-A survey examining the emerging phenomenon of situational awareness in large language models, reviewing current definitions, emergence mechanisms, and testing methodologies while discussing associated safety considerations.
-
-**Resources:**
-
-- [Full Report]({{ base_path }}/files/master/Thomas_Michel-Théo_Rudkiewicz-Situational_Awareness.pdf)
-
 ## Developing Three-Risk-Proof Sequential Decision Making for Agricultural Decisions under Environmental Risks (Internship project)
 
 How can we make better agricultural decisions when nature is inherently unpredictable? This research develops a novel framework for risk-aware sequential decision-making, focusing on forest management under environmental hazards like storms and fires.
@@ -66,4 +48,3 @@ The study introduces a novel framework for "satisficing regret" and develops eff
 **Resources:**
 
 - [Full Report]({{ base_path }}/files/internship/satisficing_rl.pdf)
-
