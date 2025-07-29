@@ -1,0 +1,210 @@
+/* ==========================================================================
+   CUSTOM ENHANCEMENTS FOR UNIQUE DESIGN
+   ========================================================================== */
+
+/* Remove all default underlines and add custom animated underline */
+a:not(.btn):not(.masthead__menu-item a) {
+  color: var(--global-link-color);
+  text-decoration: none !important;
+  position: relative;
+  transition: color 0.2s ease;
+  font-weight: 500;
+  border-bottom: none !important;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: var(--global-link-color);
+    transition: width 0.3s ease;
+  }
+  
+  &:hover, &:focus, &:active, &:visited:hover {
+    color: var(--global-link-color-hover);
+    text-decoration: none !important;
+    border-bottom: none !important;
+    
+    &::after {
+      width: 100%;
+    }
+  }
+  
+  &:visited {
+    color: var(--global-link-color);
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+}
+
+/* Enhanced Card-like Content Sections */
+.page__content {
+  background: var(--global-bg-color);
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow;
+  padding: 2rem;
+  margin: 1rem 0;
+  
+  @include breakpoint($medium) {
+    padding: 3rem;
+  }
+}
+
+/* Modern Code Block Styling */
+.highlight,
+pre {
+  background: var(--global-code-background-color) !important;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  font-family: $monospace;
+  
+  &:hover {
+    box-shadow: $box-shadow-lg;
+    transition: $global-transition;
+  }
+}
+
+/* Remove bullet points from sidebar and footer lists */
+.author__urls,
+.page__footer ul,
+.page__footer-follow ul,
+.social-icons {
+  list-style: none !important;
+  
+  li {
+    list-style: none !important;
+    
+    &::before {
+      display: none !important;
+    }
+  }
+}
+
+/* Enhanced List Styling for content lists only */
+.page__content ul:not(.author__urls):not(nav ul) {
+  list-style: none;
+  
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    list-style: none;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 6px;
+      height: 6px;
+      background: var(--global-link-color);
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+    
+    &:hover::before {
+      transform: translateY(-50%) scale(1.2);
+      transition: $global-transition;
+    }
+  }
+}
+
+/* Enhanced Blockquote Styling */
+blockquote {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+  border-left: 4px solid var(--global-link-color);
+  border-radius: 0 $border-radius $border-radius 0;
+  box-shadow: $box-shadow;
+  font-family: $serif;
+  font-style: italic;
+  position: relative;
+  
+  &::before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--global-link-color);
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    opacity: 0.3;
+    line-height: 1;
+  }
+}
+
+/* Modern Button-like Elements */
+.btn,
+.archive__item-excerpt .btn {
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: $border-radius;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  transition: $global-transition;
+  display: inline-block;
+  box-shadow: $box-shadow;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $box-shadow-lg;
+    color: white;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced Image Styling */
+img {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  transition: box-shadow 0.2s ease;
+  
+  &:hover {
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+/* Subtle scroll indicator */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-primary);
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 1000;
+  animation: scroll-indicator linear forwards;
+  animation-timeline: scroll();
+}
+
+/* Enhanced focus states for accessibility */
+*:focus {
+  outline: 2px solid var(--global-link-color);
+  outline-offset: 2px;
+  border-radius: $border-radius;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection styling */
+::selection {
+  background: var(--global-link-color);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--global-link-color);
+  color: white;
+}

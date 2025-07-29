@@ -13,31 +13,34 @@ $doc-font-size              : 16;
 $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
-/* System typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+/* Modern Typography Stack */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* Enhanced typeface definitions */
+$serif                      : 'Merriweather', Georgia, 'Times New Roman', serif;
+$sans-serif                 : 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+$monospace                  : 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 
 /* Sans serif typefaces */
 $sans-serif-narrow          : $sans-serif;
-$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
+$helvetica                  : 'Inter', Helvetica, "Helvetica Neue", Arial, sans-serif;
 
 /* Serif typefaces */
-$georgia                    : Georgia, serif;
-$times                      : Times, serif;
+$georgia                    : 'Merriweather', Georgia, serif;
+$times                      : 'Merriweather', Times, serif;
 $bodoni                     : "Bodoni MT", serif;
 $calisto                    : "Calisto MT", serif;
-$garamond                   : Garamond, serif;
+$garamond                   : 'Merriweather', Garamond, serif;
 
-/* Type scale */
-$type-size-1                : 2.441em;  // ~39.056px
-$type-size-2                : 1.953em;  // ~31.248px
-$type-size-3                : 1.563em;  // ~25.008px
-$type-size-4                : 1.25em;   // ~20px
-$type-size-5                : 1em;      // ~16px
-$type-size-6                : 0.75em;   // ~12px
-$type-size-7                : 0.6875em; // ~11px
-$type-size-8                : 0.625em;  // ~10px
+/* Refined type scale with better harmony and no cropping */
+$type-size-1                : 2.25em;   // ~36px - Large headings
+$type-size-2                : 1.875em;  // ~30px - Section headings
+$type-size-3                : 1.5em;    // ~24px - Page titles
+$type-size-4                : 1.25em;   // ~20px - Subheadings
+$type-size-5                : 1.125em;  // ~18px - Body large
+$type-size-6                : 1em;      // ~16px - Body text
+$type-size-7                : 0.875em;  // ~14px - Small text
+$type-size-8                : 0.75em;   // ~12px - Very small
 
 $global-font-family         : $sans-serif;
 $header-font-family         : $sans-serif;

@@ -1,47 +1,72 @@
 /* ==========================================================================
-   DEFAULT THEME
+   CUSTOM UNIQUE THEME
    ========================================================================== */
 
-/* Color codes used for the theme */
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : #9ba1a6;
-$lighter-gray               : mix(#fff, $gray, 90%);
+/* Serene Green Color Palette - Calm Academic Theme */
+$primary-green              : #059669;    // Rich emerald green
+$secondary-emerald          : #047857;    // Deep emerald
+$accent-forest              : #065f46;    // Dark forest green
+$warm-sage                  : #16a34a;    // Fresh sage green
 
-/* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+$neutral-slate-50           : #fefefe;     // Warm white
+$warm-cream                 : #faf9f5;     // Warm cream background
+$neutral-slate-100          : #f7f6f3;     // Warm light gray
+$neutral-slate-200          : #e8e6e1;     // Warm border
+$neutral-slate-300          : #cbd5e1;
+$neutral-slate-400          : #94a3b8;
+$neutral-slate-500          : #64748b;
+$neutral-slate-600          : #475569;
+$neutral-slate-700          : #334155;
+$neutral-slate-800          : #1e293b;
+$neutral-slate-900          : #0f172a;
 
-/* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
+/* Semantic colors using modern palette */
+$gray                       : $neutral-slate-500;
+$dark-gray                  : $neutral-slate-700;
+$darker-gray                : $neutral-slate-800;
+$light-gray                 : $neutral-slate-400;
+$lighter-gray               : $neutral-slate-200;
+
+/* Enhanced color codes for the site */
+$danger-color               : #ef4444;
+$info-color                 : $primary-green;
+$notice-color               : $neutral-slate-500;
+$success-color              : $secondary-emerald;
+$warning-color              : #f59e0b;
+
+/* Modern design tokens */
+$border-radius              : 8px;
+$border-radius-lg           : 12px;
+$box-shadow                 : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow-lg              : 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$global-transition          : all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$masthead-height            : 80px;
 $navicon-width              : 28px;
 $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Default light theme for the site */
+/* Custom unique theme with serene aesthetics */
 :root {
-    --global-base-color                 : #{$gray};
-    --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
-    --global-border-color               : #{$lighter-gray};
-    --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
-    --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$lighter-gray};
+    --global-base-color                 : #{$neutral-slate-500};
+    --global-bg-color                   : #{$warm-cream};
+    --global-footer-bg-color            : #{$neutral-slate-100};
+    --global-border-color               : #{$neutral-slate-200};
+    --global-dark-border-color          : #{$neutral-slate-300};
+    --global-code-background-color      : #{$neutral-slate-100};
+    --global-code-text-color            : #{$neutral-slate-800};
+    --global-fig-caption-color          : #{$neutral-slate-600};
+    --global-link-color                 : #{$primary-green};
+    --global-link-color-hover           : #{$secondary-emerald};
+    --global-link-color-visited         : #{$primary-green};  
+    --global-masthead-link-color        : #{$neutral-slate-700};
+    --global-masthead-link-color-hover  : #{$primary-green};    
+    --global-text-color                 : #{$neutral-slate-800};
+    --global-text-color-light           : #{$neutral-slate-600};
+    --global-thead-color                : #{$neutral-slate-100};
+    
+    /* Custom gradient variables */
+    --gradient-primary                  : linear-gradient(135deg, #{$primary-green} 0%, #{$secondary-emerald} 100%);
+    --gradient-accent                   : linear-gradient(135deg, #{$accent-forest} 0%, #{$primary-green} 100%);
+    --gradient-warm                     : linear-gradient(135deg, #{$warm-sage} 0%, #{$secondary-emerald} 100%);
 }

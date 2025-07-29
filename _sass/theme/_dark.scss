@@ -33,22 +33,42 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Dark theme for the site */
+/* Modern dark theme matching our custom design */
 html[data-theme="dark"] {
     --global-base-color                 : #{$background};
-    --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : #{$light-gray};
-    --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};
-    --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-light};
-    --global-text-color                 : #{$text};
-    --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$background-lighter};
+    --global-bg-color                   : #0f172a;
+    --global-footer-bg-color            : #1e293b;
+    --global-border-color               : #334155;
+    --global-dark-border-color          : #475569;
+    --global-code-background-color      : #1e293b;
+    --global-code-text-color            : #e2e8f0;
+    --global-fig-caption-color          : #94a3b8;
+    --global-link-color                 : #4ade80;
+    --global-link-color-hover           : #34d399;
+    --global-link-color-visited         : #4ade80;
+    --global-masthead-link-color        : #e2e8f0;
+    --global-masthead-link-color-hover  : #4ade80;
+    --global-text-color                 : #e2e8f0;
+    --global-text-color-light           : #94a3b8;
+    --global-thead-color                : #1e293b;
+    
+    /* Dark theme gradients */
+    --gradient-primary                  : linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    --gradient-accent                   : linear-gradient(135deg, #047857 0%, #22c55e 100%);
+    --gradient-warm                     : linear-gradient(135deg, #84cc16 0%, #10b981 100%);
+}
+
+/* Dark theme specific adjustments */
+html[data-theme="dark"] {
+  .masthead {
+    background: rgba(15, 23, 42, 0.95);
+  }
+  
+  .page__content {
+    background: rgba(30, 41, 59, 0.5);
+  }
+  
+  blockquote {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%);
+  }
 }
