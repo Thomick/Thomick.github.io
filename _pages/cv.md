@@ -8,8 +8,6 @@ redirect_from:
 
 {% include base_path %}
 
-See also the pdf version [here]({{ base_path }}/files/CV_Thomas_MICHEL_2024.pdf) (Last update: 2024-10-24).
-
 ## Education
 
 * 2023 – 2024 : Master degree “Mathematics, Vision, Learning” (MVA) at École Normale Supérieure Paris-Saclay.
