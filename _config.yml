@@ -220,15 +220,19 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
+    label: Teaching
   publications:
     output: true
     permalink: /:collection/:path/
+    label: Publications
   portfolio:
     output: true
     permalink: /:collection/:path/
+    label: Portfolio
   talks:
     output: true
     permalink: /:collection/:path/
+    label: Talks
 
 
 # These settings control how pages and collections are included in the site
