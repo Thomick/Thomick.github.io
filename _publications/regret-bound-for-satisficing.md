@@ -10,39 +10,32 @@ paperurl: '/files/regret_bounds_for_satisficing.pdf'
 citation: 'Michel, T., Hajiabolhassan, H., & Ortner, R. (2023). &quot;Regret Bounds for Satisficing in Multi-Armed Bandit Problems.&quot; <i>Transactions on Machine Learning Research</i>.'
 ---
 
-# When "Good Enough" Beats "Perfect": Exploring Satisficing in Reinforcement Learning
+# Satisficing in Multi-Armed Bandits
 
-Have you ever found yourself spending time searching for the absolute best option, only to realize a perfectly good solution was right in front of you all along? This practical insight inspired our research at the University of Leoben, where we explored an important question: why should AI systems exhaust resources hunting for optimal solutions when something satisfactory would do just fine?
+Standard reinforcement learning algorithms aim to find optimal policies, which requires extensive exploration. But in many applications, we don't actually need the best option. We just need one that's good enough. This paper studies what happens when we design algorithms around that more modest goal.
 
 ## The Satisficing Approach
 
-Reinforcement learning typically aims to find the absolute best policy, which often demands extensive exploration of possibilities. In our research, we narrowed our focus to multi-armed bandit problems—a foundational framework in RL where an agent must choose between different actions (like pulling different slot machine arms) without initially knowing their rewards. This setting strips away the complexity of navigating through different states, letting us zoom in specifically on how algorithms make the explore-exploit tradeoff.
+We work with multi-armed bandit problems, where an agent chooses between actions (think: slot machine arms) without initially knowing their rewards. This setting lets us study the explore-exploit tradeoff in isolation, without the added complexity of navigating between states.
 
-We embraced the concept of "satisficing"—a term coined by combining "satisfying" and "sufficing"—which perfectly captures our approach. Rather than endlessly hunting for the optimal choice, we asked: what if an algorithm could recognize when it had found something "good enough" and stop wasting resources on unnecessary exploration?
+The term "satisficing" combines "satisfying" and "sufficing." It captures the idea of seeking adequate solutions rather than optimal ones. Given a satisfaction threshold, we want an algorithm that finds an action exceeding that threshold and commits to it, rather than continuing to explore for marginal improvements.
 
-In many scenarios, we aim for solutions that exceed a specific satisfaction threshold rather than pursuing the absolute best outcome. We introduced "satisficing regret," which quantifies how much an algorithm loses compared to having consistently played a satisfying action. The key challenge is not just finding a good-enough solution, but knowing when to stick with it instead of wastefully exploring alternatives—and conversely, recognizing when to abandon an action that reveals itself to not actually be satisfying.
+We introduce "satisficing regret," which measures how much an algorithm loses compared to consistently playing a satisfying action. The algorithm faces two challenges: knowing when to stop exploring because a good-enough action has been found, and knowing when to abandon an action that reveals itself to fall short of the threshold.
 
-## What We Discovered
+## Results
 
-The results were noteworthy:
+When a satisfactory action exists, our Sat-UCB algorithm achieves constant satisficing regret. Standard bandit algorithms show logarithmic regret growth in this setting because they keep exploring even after finding satisfactory actions, accumulating unnecessary losses. Prior satisficing algorithms in the literature lacked theoretical guarantees of this type.
 
-When a satisfactory action exists, our approach achieves constant regret—a significant improvement over traditional methods that typically show logarithmic satisficing regret growth. Note that they were not designed for satisficing. In practical terms, this means our algorithm can find good-enough solutions more efficiently and commit to them appropriately. Our approach also outperforms prior satisficing algorithms in the literature, in addition to providing theoretical guarantees that were not previously available.
+When no satisfactory action exists, Sat-UCB falls back to standard logarithmic regret, so it doesn't sacrifice performance in classical bandit problems.
 
-Our Sat-UCB algorithm proved particularly versatile, delivering:
-- Constant satisficing regret when satisfactory actions exist
-- Standard logarithmic regret in other scenarios, maintaining compatibility with classical approaches
+## Experiments
 
-## Experimental Results
+We validated the theoretical results on synthetic data. Sat-UCB outperformed standard algorithms when satisfactory actions existed and remained competitive otherwise.
 
-We validated our theoretical findings through experiments on synthetic data. Not only did Sat-UCB outperform standard algorithms in satisficing scenarios, but it also remained competitive in classical bandit problems—showing you don't have to sacrifice traditional performance to gain efficiency.
+We also developed Sat-UCB+, a variant that performed better in our experiments. We don't yet have theoretical guarantees for this version, but the empirical results suggest it's worth further study.
 
-We also developed an enhanced version called Sat-UCB+ that showed even better results in our experiments. While we haven't yet developed the theoretical guarantees for this improved version, the empirical performance is promising.
+## What's Next
 
-## Where This Takes Us Next
+The natural extension is to move beyond bandits to full reinforcement learning settings and general Markov decision processes. The satisficing perspective could be useful in applications where timely decisions matter more than squeezing out the last bit of performance.
 
-This work opens doorways to more efficient and practical AI systems. The challenge now lies in extending these satisficing principles to more complex reinforcement learning environments and general Markov decision processes.
-
-Imagine AI systems that know when to stop searching for perfection and deliver timely, good-enough solutions—potentially improving applications from automated decision-making to resource allocation where timeliness matters as much as optimality.
-
-[Explore the technical details in the full paper →]({{ base_path }}/files/regret_bounds_for_satisficing.pdf)
-
+[Full paper →]({{ base_path }}/files/regret_bounds_for_satisficing.pdf)
