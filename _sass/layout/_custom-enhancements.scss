@@ -2,7 +2,7 @@
    CUSTOM ENHANCEMENTS FOR UNIQUE DESIGN
    ========================================================================== */
 
-/* Remove all default underlines and add custom animated underline */
+/* Remove all default underlines (the top menu keeps its own hover line) */
 a:not(.btn):not(.masthead__menu-item a) {
   color: var(--global-link-color);
   text-decoration: none !important;
@@ -10,26 +10,12 @@ a:not(.btn):not(.masthead__menu-item a) {
   transition: color 0.2s ease;
   font-weight: 500;
   border-bottom: none !important;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background: var(--global-link-color);
-    transition: width 0.3s ease;
-  }
+
   
   &:hover, &:focus, &:active, &:visited:hover {
     color: var(--global-link-color-hover);
     text-decoration: none !important;
     border-bottom: none !important;
-    
-    &::after {
-      width: 100%;
-    }
   }
   
   &:visited {

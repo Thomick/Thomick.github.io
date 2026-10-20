@@ -7,6 +7,8 @@ excerpt: 'This paper explores the concept of satisficing in multi-armed bandit p
 date: 2023-06-09
 venue: 'Transactions on Machine Learning Research'
 paperurl: '/files/regret_bounds_for_satisficing.pdf'
+header:
+  teaser: 'publications/satisficing-thumb.png'
 citation: 'Michel, T., Hajiabolhassan, H., & Ortner, R. (2023). &quot;Regret Bounds for Satisficing in Multi-Armed Bandit Problems.&quot; <i>Transactions on Machine Learning Research</i>.'
 ---
 
